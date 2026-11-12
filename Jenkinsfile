@@ -5,7 +5,7 @@ pipeline {
         stage('Git Checkout') {
     steps {
         git branch: 'master',
-            url: 'https://github.com/kliakos/sparkjava-war-example1.git'
+    url: 'https://github.com/kliakos/sparkjava-war-example.git'
     }
 }
        stage('Build') {
