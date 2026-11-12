@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git 'https://github.com/kliakos/sparkjava-war-example.git'
+                git 'https://github.com/kliakos/sparkjava-war-example1.git'
             }
         }
 
