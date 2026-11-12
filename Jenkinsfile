@@ -1,13 +1,17 @@
 pipeline {
-  agent any
-  environment {
-    path = "/optmaven/bin:$PATH"
-  }
-  stages {
-    stage('build') {
-      stage {
-        sh 'mvn clean package'
-      }
+    agent any
+
+    stages {
+        stage('Git Checkout') {
+            steps {
+                git 'https://github.com/kliakos/sparkjava-war-example.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
     }
-  }
 }
