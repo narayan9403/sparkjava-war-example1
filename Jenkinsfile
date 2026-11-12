@@ -4,8 +4,9 @@ pipeline {
     stages {
         stage('Git Checkout') {
     steps {
+        deleteDir()
         git branch: 'master',
-    url: 'https://github.com/kliakos/sparkjava-war-example.git'
+            url: 'https://github.com/narayan9403/sparkjava-war-example1.git'
     }
 }
        stage('Build') {
